@@ -10,13 +10,13 @@
 
     <title>My name's Protfolio Resume</title>
     <!-- Custom styles for this template -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
   </head>
 
   <body>
     <section>
         <div class="container container-main">
-            <img src="img/no_face.jfif" class="profile-image" alt="">
+            <img src="{{ url_for('static', filename='img/no_face.jfif') }}" class="profile-image" alt="">
             <header>
                 <h1>Hello, <br> my name is <strong>Name Surname</strong> Some Info.</h1>
             </header>
