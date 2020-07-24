@@ -28,7 +28,8 @@
 1. Open a new ssh terminal
 2. sudo rm /etc/nginx/sites-enabled/default
 3. sudo vim /etc/nginx/sites-enabled/flask_settings
-4. Add the below code to flask_settings\n
+4. Add the below code to flask_settings:
+
    server {
    listen 80;
    listen 443 ssl http2;
