@@ -1,4 +1,6 @@
-# A personal website template that runs with Flask
+# A personal website template that runs with Flask, Gunicorn, Nginx
+
+![alt text](img/flask_gunicorn_nginx.png)
 
 ## Requirements
 
