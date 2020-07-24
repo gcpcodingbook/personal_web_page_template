@@ -41,5 +41,6 @@
     proxy_set_header X-Real-IP $remote_addr;
    }
    }
-   sudo nginx -s stop
-   sudo nginx
+
+5. sudo nginx -s stop
+6. sudo nginx
