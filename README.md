@@ -1,11 +1,12 @@
-A personal website template that runs with Flask
+# A personal website template that runs with Flask
 
-#Requirements
+## Requirements
+
 flask
 gunicorn
 nginx
 
-# steps
+## Steps
 
 1. sudo apt-get update
 2. sudo apt-get install software-properties-common
@@ -18,7 +19,7 @@ nginx
 9. sudo certbot --nginx
 10. gunicorn app:app --reload-engine auto
 
-# nginx stuff
+### nginx stuff
 
 Go to /etc/nginx/sites-enabled and create flask_settings and add the below code
 server {
