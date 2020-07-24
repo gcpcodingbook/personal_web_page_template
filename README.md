@@ -30,17 +30,17 @@
 3. sudo vim /etc/nginx/sites-enabled/flask_settings
 4. Add the below code to flask_settings:
 
-   server {
-   listen 80;
-   listen 443 ssl http2;
-   ssl_certificate /etc/letsencrypt/live/<your_doamin>/fullchain.pem;
-   ssl_certificate_key /etc/letsencrypt/live/<your_domain>/privkey.pem;
-   location / {
-   proxy_pass http://127.0.0.1:8000;
-   proxy_set_header Host $host;
-    proxy_set_header X-Real-IP $remote_addr;
-   }
-   }
+   server {<br/>
+   listen 80;<br/>
+   listen 443 ssl http2;<br/>
+   ssl_certificate /etc/letsencrypt/live/<your_doamin>/fullchain.pem;<br/>
+   ssl_certificate_key /etc/letsencrypt/live/<your_domain>/privkey.pem;<br/>
+   location / {<br/>
+   proxy_pass http://127.0.0.1:8000;<br/>
+   proxy_set_header Host $host;<br/>
+    proxy_set_header X-Real-IP $remote_addr;<br/>
+   }<br/>
+   }<br/>
 
 5. sudo nginx -s stop
 6. sudo nginx
