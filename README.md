@@ -25,20 +25,20 @@
 
 ### nginx stuff
 
-Open a new ssh terminal
-sudo rm /etc/nginx/sites-enabled/default
-sudo vim /etc/nginx/sites-enabled/flask_settings
-Add the below code to flask_settings
-server {
-listen 80;
-listen 443 ssl http2;
-ssl_certificate /etc/letsencrypt/live/<your_email>/fullchain.pem;
-ssl_certificate_key /etc/letsencrypt/live/<your_email>/privkey.pem;
-location / {
-proxy_pass http://127.0.0.1:8000;
-proxy_set_header Host $host;
+1. Open a new ssh terminal
+2. sudo rm /etc/nginx/sites-enabled/default
+3. sudo vim /etc/nginx/sites-enabled/flask_settings
+4. Add the below code to flask_settings\n
+   server {
+   listen 80;
+   listen 443 ssl http2;
+   ssl_certificate /etc/letsencrypt/live/<your_email>/fullchain.pem;
+   ssl_certificate_key /etc/letsencrypt/live/<your_email>/privkey.pem;
+   location / {
+   proxy_pass http://127.0.0.1:8000;
+   proxy_set_header Host $host;
     proxy_set_header X-Real-IP $remote_addr;
-}
-}
-sudo nginx -s stop
-sudo nginx
+   }
+   }
+   sudo nginx -s stop
+   sudo nginx
