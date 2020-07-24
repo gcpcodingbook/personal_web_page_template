@@ -26,8 +26,9 @@
 ### nginx stuff
 
 Open a new ssh terminal
-Go to /etc/nginx/sites-enabled and create flask_settings and add the below code
+sudo rm /etc/nginx/sites-enabled/default
 sudo vim /etc/nginx/sites-enabled/flask_settings
+Add the below code to flask_settings
 server {
 listen 80;
 listen 443 ssl http2;
