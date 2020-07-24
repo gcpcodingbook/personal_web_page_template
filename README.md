@@ -2,9 +2,10 @@
 
 ## Requirements
 
-flask
-gunicorn
-nginx
+1. flask
+2. gunicorn
+3. nginx
+4. git
 
 ## Steps
 
@@ -15,9 +16,10 @@ nginx
 5. sudo apt-get update
 6. sudo apt-get install certbot python3-certbot-nginx
 7. sudo apt-get -y install python3-pip
-8. pip3 install flask gunicorn
-9. sudo certbot --nginx
-10. gunicorn app:app --reload-engine auto
+8. sudo apt-get install git
+9. pip3 install flask gunicorn
+10. sudo certbot --nginx
+11. gunicorn app:app --reload-engine auto
 
 ### nginx stuff
 
